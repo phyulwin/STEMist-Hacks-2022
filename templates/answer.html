@@ -2,7 +2,6 @@
 {% block head %}{% endblock %}
   
 {% block body %}
-  <h1><b>ASTRO GEEKS</b></h1>
   <div class="questionnaire">
   <h2>Answer Box</h2>
   <h2>{{answer}}</h2>
@@ -16,5 +15,18 @@
         <button>RETURN</button>
     </a>    
   </form>
-    
+  </div>  
+</div>
+
+<!--Banner for APOD-->
+<div class="article-wrap">
+  <div class="article-body">
+    <img src="https://res.cloudinary.com/dunkimages/image/upload/v1569903804/codepen/article-ribbon-donuts.jpg" alt="" />
+    <div class="article-inner">
+      <p>This is the text of the article. It should feature all kinds of cool stuff and be really long.</p>
+      <a href="#" style="color: tomato;font-weight: bold;text-decoration: none;font-family: sans-serif;">read more &rarr;</a>
+      
+    </div>
+  </div>
+</div>
 {% endblock %}
