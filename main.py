@@ -13,25 +13,29 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 @app.route('/', methods=['POST', 'GET'])
 def index():
   if request.method == 'POST':
+    question = request.form.get("question")
+    try:
+      res = client.query(question)
+      answer = next(res.results).text
+      return render_template('answer.html', answer=answer)
+    except:
+      return render_template('question.html')
+  else:
+    return render_template('question.html')
+
+@app.route('/answer',methods=['POST','GET'])
+def answer():
+  if request.method == "POST":
     pass
   else:
     return render_template('question.html')
 
-#wolfram configure continued:
-def output(input):
-  print("Answer to "+str(input)+"\n")
-  try:
-    res = client.query(input)
-    print(next(res.results).text)
-    print("\n")
-    return
-  except:
-    return output("Provide a different question: ")
-    
-#Ask questions to the Wolfram Knowledgebase. 
-#output("2+2")
-#output("Volume of a Cylinder")
-#output(input("Ask a question: "))
+@app.route('/contact',methods=['POST','GET'])
+def contact():
+  if request.method == "POST":
+    pass
+  else:
+    return render_template('contact.html')
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=81)
