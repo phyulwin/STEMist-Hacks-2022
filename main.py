@@ -39,7 +39,7 @@ def contact():
 
 #Astronomy Picture of the Day
 @app.route('/apod',methods=['POST','GET'])
-def contact():
+def apod():
   if request.method == "POST":
     pass
   else:
@@ -54,3 +54,4 @@ def contact():
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=81)
+  
