@@ -1,7 +1,7 @@
 import os
 import re
 import wolframalpha
-
+import requests
 from flask import Flask, redirect, render_template, session, url_for, request
 
 #configure Wolfram Knowledge Database
