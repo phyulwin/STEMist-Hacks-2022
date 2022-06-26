@@ -11,8 +11,21 @@ body {
   margin-left: 50px;
   padding:0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
-  
+  background-image:
+url('https://i.postimg.cc/MKTfDC4Y/GALACTIC-ORIGIN-bg-edited.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  
+}
+.title{
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  font-family: "Audiowide", cursive;
+  font-size: 22px;
+  border-color:#0000;
+  text-align: center; 
 }
 
 .questionnaire {
@@ -26,12 +39,12 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
-  border-color:#141;
+  border-color:#ffff;
 }
 
+
 .questionnaire h2 {
-  margin: 0 0 30px;
-  padding: 0;
+  margin: 30px;
   color: #fff;
   text-align: center;
 }
@@ -65,12 +78,12 @@ body {
 
 .questionnaire button {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 20px;
   font-size: 16px;
   color: #fff;
   border: none;
   outline: none;
-  background: transparent;
+  background: none;
 }
 
 .questionnaire .user-box input:focus ~ label,
@@ -218,11 +231,18 @@ a:hover {
 }
 
 a:active {
-  color: hotpink;
+  color: #ff69b4;
 } 
 .APOD{
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  border-color:#0000;
   text-align: center;
    position: relative;
   padding: 40px; 
-  ;
+}
+.APOD.h2{
+  color: white;
 }
